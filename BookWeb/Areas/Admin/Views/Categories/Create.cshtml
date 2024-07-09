@@ -1,0 +1,90 @@
+﻿@model Book.Models.Category
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<div class="card shadow border-0 mt-3">
+    <div class="card-header bg-secondary bg-gradient ml-0 py-2">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h3 class="text-white py-2 "> Add New Category</h3>
+            </div> 
+        </div>
+    </div>
+    <div class="card-body p-4">
+        <form method="post" class="row" asp-action="Create">
+            <div class="row">
+                <div>
+                    <h3 class="text-center"> New Category</h3>
+                </div>
+            </div>
+            <div class="border p-3">
+                <div class="form-floating py-2 col-8 mx-auto">
+                    <input asp-for="Name" class="form-control border-0 shadow" />
+                    <label asp-for="Name" class="ms-2"></label>
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
+                <div class="form-floating py-2 col-8 mx-auto">
+                    <input asp-for="DisplayOrder" class="form-control border-0 shadow" />
+                    <label asp-for="DisplayOrder" class="ms-2"></label>
+                   <span asp-validation-for="DisplayOrder" class="text-danger"></span>
+                </div>
+
+                <div class="col-6 mx-auto">
+                    <input type="submit" value="Create" class="btn btn-primary" />
+                    <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+                </div>
+
+            </div>
+        </form>
+    </div>
+
+</div>
+
+
+@section Scripts {
+    @{
+        <partial name="_ValidationScriptsPartial" />
+    }
+
+}
+
+
+
+
+
+   
+@*  <form method="post" asp-action="Create">
+
+          
+  <div class="border p-3 mb-4">
+        <div class="row">
+          <div>
+              <h3 class="text-bg-info text-center "> Add New Category</h3>
+          </div>
+        </div>
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="mb-3">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="DisplayOrder" class="control-label"></label>
+                <input asp-for="DisplayOrder" class="form-control" />
+                <span asp-validation-for="DisplayOrder" class="text-danger"></span>
+            </div>
+
+            <div class="col-6">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            <a asp-action="Index" class="btn btn-warning">Back to List</a>
+            </div>
+
+   </div>
+</form> *@
+  
+
+
+
